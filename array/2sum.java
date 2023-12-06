@@ -1,26 +1,23 @@
-import java.util.*;
+import java.util.Arrays;
 
-public class Main {
-    public static String twoSum(int n, int []arr, int target) {
-        Arrays.sort(arr);
-        int left = 0, right = n - 1;
+public class Solution {
+    public static String read(int n, int[] book, int target) {
+        Arrays.sort(book);
+        int left = 0;
+        int right = n - 1;
+        
         while (left < right) {
-            int sum = arr[left] + arr[right];
+            int sum = book[left] + book[right];
+            
             if (sum == target) {
                 return "YES";
-            } else if (sum < target) left++;
-            else right--;
+            } else if (sum < target) {
+                left++;
+            } else {
+                right--; 
+            }
         }
-        return "NO";
+        
+        return "NO"; 
     }
-
-    public static void main(String args[]) {
-        int n = 5;
-        int[] arr = {2, 6, 5, 8, 11};
-        int target = 14;
-        String ans = twoSum(n, arr, target);
-        System.out.println("This is the answer for variant 1: " + ans);
-
-    }
-
-} 
+}
