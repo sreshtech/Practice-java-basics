@@ -22,7 +22,7 @@ class Solution {
         return -1;
     }
 }
-//better time complexity
+//better time complexity - done from chat gpt yet to practice!
 public class Solution {
     public static int majorityElement(int[] nums) {
         int count = 0;
