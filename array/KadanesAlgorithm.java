@@ -17,3 +17,17 @@ long maxi = Long.MIN_VALUE; // maximum sum
 
         // Return the maximum subarray sum found
         return (int)maxi;
+//complexity O(n)
+class Solution {
+    public int maxSubArray(int[] nums) {     
+        int maxSum = nums[0];
+        int currentSum = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            currentSum = Math.max(nums[i], currentSum + nums[i]);
+            maxSum = Math.max(maxSum, currentSum);
+        }
+
+        return maxSum;
+    }
+}
