@@ -13,7 +13,7 @@ public class Solution {
             }
 
             if (currentSum == k) {
-                maxLength = Math.max(maxLength, right - left + 1);//for choosing max among maxLength & right - left + 1
+                maxLength = Math.max(maxLength, right - left + 1);//for choosing max btw maxLength & right - left + 1
             }
         }
 
